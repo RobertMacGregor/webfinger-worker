@@ -5,8 +5,8 @@ interface Alias {
 
 const aliases: Record<string, Alias> = {
   me: {
-    targetUser: "jleight",
-    targetHost: "infosec.exchange",
+    targetUser: "rob",
+    targetHost: "faithandrob.com",
   },
 };
 
@@ -34,6 +34,10 @@ export default {
         `https://${targetHost}/users/${targetUser}`,
       ],
       links: [
+        {
+          "rel": "http://openid.net/specs/connect/1.0/issuer",
+          "href": "${issuer URL}"
+        },
         {
           rel: "http://webfinger.net/rel/profile-page",
           type: "text/html",
